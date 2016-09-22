@@ -1,9 +1,9 @@
 #include <stdio.h>
-int main() {
-   float lado_quadrado, area_quadrado;
-   printf("informe o lado do quadrado: ");
-   scanf("%f" ,&lado_quadrado);
-   area_quadrado = lado_quadrado*lado_quadrado;
-   printf("a area do quadrado e: %.2f\n", area_quadrado);
-   return 0;
+int main (){
+    float x, area;
+    printf("Entre com o lado do quadrado: ");
+    scanf("%f", &x);
+    area=x*x;
+    printf("A area do quadrado e: %.3f\n", area);
+return 0;
 }

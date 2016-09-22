@@ -1,15 +1,18 @@
 #include <stdio.h>
-int main() {
-      int numero, i;
-    printf("informe um numero: ");
-    scanf("%d" ,&numero);
-    for(i=2; i< numero; i++) {
-        if(numero%i == 0){
-         printf("nao e primo");
-           break;
-        }
+int main ()
+{
+    int x, cont, i;
+    cont=0;
+    printf("Digite um numero: ");
+    scanf("%d", &x);
+    for (i=2; i<=x;i++)
+    {
+        if (x%i==0)
+            cont++;
     }
-    if( i == numero)
-        printf("primo! \n");
-     return 0 ;
+            if(cont>1)
+                printf("Nao e primo!!!");
+            else
+            printf("E primo!!!");
+    return 0;
 }

@@ -1,52 +1,25 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include<time.h>
-int pega_carta();
-char figura_carta(int carta);
-int main(){
- srand (time(0));
+#include<stdio.h>
 
+void num_pares ();
 
-int carta1 = pega_carta(), carta2 = pega_carta();
-int i, ncartas, carta,soma=0;
-printf ("quantas quartas vc quer? ");
-scanf("%d", &ncartas);
-for(i = 0; i< ncartas; i++){
-    carta =pega_carta();
-    printf("%c", figura_carta(carta));
-    soma = soma + ((carta >10 ) ? 10 : carta);
+void num_impares ();
+
+int main () {
+        int op;
+        printf("Voce deseja ver os pares ou os impares?\nPara pares digite 1 e para impares digite 2: ");
+        scanf("%d",&op);
+        switch(op) {
+            case 1: num_pares(); break;
+            case 2: num_impares(); break;
+        }
+
+    return 0;
 }
- if (soma>21)
-    printf("vc perdeu \n");
- else{
-    printf("\nBanca: %c %c\n", figura_carta(carta1),figura_carta(carta2));
-    if(soma > ((carta1 >10)? 10 : carta1)+ ((carta2> 10)? 10: carta2))
-        printf("\n vc ganhou \n!");
-        else
-        printf("vc perdeu \n");
- }
 
-
-return 0;
-
+void num_pares () {
+    printf("2;4;6;8");
 }
-int pega_carta(){
-     int carta = rand ()%13 + 1;
-     return carta;
+
+void num_impares () {
+    printf("1;3;5;7;9");
 }
- char figura_carta (int carta){
- char figura ;
- switch(carta) {
- case 1: figura ='A'; break;
- case 10: figura ='D'; break;
- case 11: figura ='J'; break;
- case 12: figura ='Q'; break;
- case 13: figura ='K'; break;
-  defalt: figura = 48 + carta;
-
-
-
-
-
- }return figura;
- }

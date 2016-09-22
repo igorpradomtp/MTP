@@ -1,11 +1,11 @@
 #include <stdio.h>
- int main (){
-   float lado1, lado2 , area;
-   printf("informe o primeiro lado do triangulo: ");
-   scanf("%f",&lado1);
-   printf("informe o segundo lado do triangulo: ");
-   scanf ("%f",&lado2);
-     area = (lado1*lado2)/2;
-     printf("A area do triangulo e: %.2f\n", area);
-     return 0;
-     }
+int main (){
+    float b, h, area;
+    printf("Entre com a base do triangulo: ");
+    scanf("%f", &b);
+    printf("Entre com a altura do triangulo: ");
+    scanf("%f", &h);
+    area=(b*h)/2;
+    printf("A area do triangulo e: %.3f\n", area);
+return 0;
+}

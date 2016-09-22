@@ -1,18 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-    int main () {
-        int i ;
-    char frase[256];
-     printf("digite uma frase: ");
-    gets (frase);
-    for(i =0; frase [i]; i++)
-        frase[i] = toupper (frase[i]);
-    printf("a frase tem %d caracteres . \n", strlen (frase));
-    if (strncmp(frase,"BOM DIA",7)==0 )
-        printf("BOM DIA PRA VOCE TAMBEM! \n");
+#include <ctype.h>
+int main (){
+char frase[256];
+int i;
+printf ("Entre com uma frase: ");
+gets(frase);
+    for(i=0;frase[i]; i++)
+    frase[i]=toupper(frase[i]);
+    printf ("A frase tem %d caracteres.\n", strlen(frase));
+    if(strcmp(frase, "BOM DIA")==0)
+        printf("Bom dia pra voce tambem!");
     else
-        printf("voce quer dizer %s?", frase);
-     return 0;
-
-    }
+                printf("Voce quer dizer: %s?", frase);
+    return 0;}

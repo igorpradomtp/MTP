@@ -1,14 +1,13 @@
-
 #include <stdio.h>
-int main() {
-       float nota1, nota2, nota3,media;
-   printf("informe a primeira nota: ");
-   scanf("%f" ,&nota1);
-   printf("informe a segunda nota: ");
-   scanf("%f" ,&nota2);
-   printf("informe a terceira nota: ");
-   scanf("%f" ,&nota3);
-   media = ((2*nota1)+(3*nota2)+(5*nota3))/10;
-   printf("a media e: %.2f\n", media);
-   return 0;
+int main (){
+    float A, B, C, media;
+    printf("Digite a primeira nota:");
+    scanf("%f", &A);
+    printf("Digite a segunda nota: ");
+    scanf("%f", &B);
+    printf("Digite a terceira nota: ");
+    scanf("%f", &C);
+   media=(A*2+B*3+C*5)/10;
+    printf("A media do aluno e: %.3f\n", media);
+return 0;
 }
